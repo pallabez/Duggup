@@ -54,7 +54,7 @@
 			<DropdownMenu.Trigger>
 				<div class="flex items-center gap-3">
 					<Avatar.Root>
-						<Avatar.Image src={user.avatar} alt="@shadcn" />
+						<Avatar.Image src={user.avatar} alt="Avatar" />
 						<Avatar.Fallback>Avatar</Avatar.Fallback>
 					</Avatar.Root>
 
