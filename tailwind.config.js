@@ -47,6 +47,9 @@ const config = {
 				card: {
 					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
+				},
+				text: {
+					DEFAULT: 'hsl(var(--text) / <alpha-value>)'
 				}
 			},
 			borderRadius: {
@@ -55,7 +58,11 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
+				// inter: [...fontFamily],
 				sans: [...fontFamily.sans]
+			},
+			boxShadow: {
+				'button-primary': '0px 4px 0px 0px hsla(0, 0%, 30%, 1)'
 			}
 		}
 	}

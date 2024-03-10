@@ -1,1 +1,82 @@
-<header>NavBar</header>
+<script lang="ts">
+	import brandText from '$lib/assets/duggup_text.svg';
+	import brandLogo from '$lib/assets/duggup_logo.svg';
+	import homeLogo from '$lib/assets/navbar/home.svg';
+	import exploreLogo from '$lib/assets/navbar/explore.svg';
+	import learnLogo from '$lib/assets/navbar/learn.svg';
+	import postLogo from '$lib/assets/navbar/post.svg';
+	import dropdownLogo from '$lib/assets/navbar/dropdown.svg';
+
+	import ButtonPrimary from '$lib/components/ui/button/buttonPrimary.svelte';
+	import * as Avatar from '$lib/components/ui/avatar';
+	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+
+	type User = {
+		id: string;
+		username: string;
+		avatar: string;
+	};
+
+	export let user: User | undefined;
+</script>
+
+<header class="flex h-16 items-center border-b border-dotted border-border">
+	<a href="/" class="flex space-x-1">
+		<img src={brandLogo} alt="Logo" />
+		<img src={brandText} alt="Duggup" />
+	</a>
+
+	<div class="flex-1" />
+
+	<nav class="flex shrink-0 items-center gap-4">
+		<a href="/" class="flex items-center gap-1 p-2 text-primary-foreground">
+			<img src={homeLogo} alt="" />
+			<span>Home</span>
+		</a>
+		<a href="/explore" class="flex items-center p-2 text-primary-foreground">
+			<img src={exploreLogo} alt="" />
+			<span>Explore</span>
+		</a>
+		<a href="/learn" class="flex items-center gap-1 p-2 text-primary-foreground">
+			<img src={learnLogo} alt="" />
+			<span>Learn</span>
+		</a>
+	</nav>
+
+	<!-- Todo: Change logo to white on hover -->
+	<ButtonPrimary>
+		<img src={postLogo} alt="" class="mr-2 group-hover:mix-blend-multiply" />
+		<span>Post</span>
+	</ButtonPrimary>
+
+	{#if user}
+		<DropdownMenu.Root>
+			<DropdownMenu.Trigger>
+				<div class="flex items-center gap-3">
+					<Avatar.Root>
+						<Avatar.Image src={user.avatar} alt="@shadcn" />
+						<Avatar.Fallback>Avatar</Avatar.Fallback>
+					</Avatar.Root>
+
+					<span class="text-base">
+						{user.username}
+					</span>
+					<img src={dropdownLogo} alt="Dropdown" class="px-2" />
+				</div>
+			</DropdownMenu.Trigger>
+
+			<DropdownMenu.Content>
+				<DropdownMenu.Group>
+					<DropdownMenu.Label>My Account</DropdownMenu.Label>
+					<DropdownMenu.Separator />
+					<DropdownMenu.Item>Profile</DropdownMenu.Item>
+					<DropdownMenu.Item>Settings</DropdownMenu.Item>
+					<DropdownMenu.Item>Subscription</DropdownMenu.Item>
+					<DropdownMenu.Item>Logout</DropdownMenu.Item>
+				</DropdownMenu.Group>
+			</DropdownMenu.Content>
+		</DropdownMenu.Root>
+	{:else}
+		{JSON.stringify(user)}
+	{/if}
+</header>

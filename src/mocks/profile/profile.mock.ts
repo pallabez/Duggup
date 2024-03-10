@@ -1,32 +1,34 @@
+import avatar from '$lib/assets/profile_krishna/avatar.png';
+
 export const USER_PROFILE = {
-	id: 1,
-	name: 'Krishna Kiran',
+	id: '1',
+	username: 'Krishna Kiran',
 	bio: 'Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write hot-takes on building a business, shipping delightful products and accelerating product and career growth.',
-	avatar: '',
+	avatar: avatar,
 	websiteLink: ''
 };
 
 export const USER_TIMELINE = {
-	userID: 1,
+	userID: '1',
 	timeline: [
 		{
-			id: 1,
+			id: '1',
 			type: 'STORIES',
 			displayDate: 'Dec 2023',
 			stories: [
 				{
-					storyID: 11,
+					storyID: '11',
 					title: 'No amount of technology can convert a bad story into a good story.'
 				},
 				{
-					storyID: 12,
+					storyID: '12',
 					title:
 						"Most people don't have original ideas. Here is how Sam Altman pushes himself to have unpopular ideas."
 				}
 			]
 		},
 		{
-			id: 2,
+			id: '2',
 			type: 'JOB_CHANGE',
 			displayDate: 'Nov 2023',
 			company: 'Duggup',
@@ -37,22 +39,22 @@ export const USER_TIMELINE = {
 			location: 'Remote'
 		},
 		{
-			id: 3,
+			id: '3',
 			type: 'STORIES',
 			displayDate: 'Dec 2023',
 			stories: [
 				{
-					storyID: 21,
+					storyID: '21',
 					title: 'Startup Lesson I am reflecting. Don\'t build for the "average person".'
 				},
 				{
-					storyID: 22,
+					storyID: '22',
 					title: 'Your biggest regrets at 80 will be acts of omission.'
 				}
 			]
 		},
 		{
-			id: 4,
+			id: '4',
 			type: 'JOB_CHANGE',
 			displayDate: 'Sep 2023',
 			company: 'BetterUp',
