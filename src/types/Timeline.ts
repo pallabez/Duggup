@@ -1,5 +1,6 @@
 export type Story = {
 	storyID: string;
+	converUrl: string;
 	title: string;
 };
 
@@ -20,6 +21,5 @@ export type TimelineJobStatus = {
 	companyLogo: string;
 	companyLocation: string;
 	role: string;
-	position: string;
-	location: string | undefined;
+	description: string;
 };

@@ -6,16 +6,14 @@
 	export let timeline: Timeline;
 </script>
 
-<div class="relative -left-[90px]">
+<div class="relative -left-[108px]">
 	{#each timeline as timelineItem}
-		<div class="relative z-10 flex items-center gap-3 py-2">
-			{#if timelineItem.type == 'STORIES'}
-				<TimelineStories item={timelineItem} />
-			{:else if timelineItem.type == 'JOB_CHANGE'}
-				<TimelineJobStatus item={timelineItem} />
-			{/if}
-		</div>
+		{#if timelineItem.type == 'STORIES'}
+			<TimelineStories item={timelineItem} />
+		{:else if timelineItem.type == 'JOB_CHANGE'}
+			<TimelineJobStatus item={timelineItem} />
+		{/if}
 	{/each}
 
-	<div class="absolute left-[143px] top-0 z-0 h-full border-l-2 border-dotted border-border" />
+	<div class="absolute left-[162px] top-0 z-0 h-full border-l-2 border-dotted border-border" />
 </div>

@@ -22,7 +22,8 @@ const config = {
 				foreground: 'hsl(var(--foreground) / <alpha-value>)',
 				primary: {
 					DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
-					foreground: 'hsl(var(--primary-foreground) / <alpha-value>)'
+					foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
+					text: 'hsl(var(--primary-text) / <alpha-value>)'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary) / <alpha-value>)',
@@ -62,7 +63,8 @@ const config = {
 				sans: [...fontFamily.sans]
 			},
 			boxShadow: {
-				'button-primary': '0px 4px 0px 0px hsla(0, 0%, 30%, 1)'
+				'button-primary': '0px 4px 0px 0px hsla(0, 0%, 30%, 1)',
+				'timeline-jobstatus': '0px 1px 2px 0px hsla(217, 57%, 91%, 0.25)'
 			}
 		}
 	}

@@ -1,6 +1,10 @@
 import avatar from '$lib/assets/profile_krishna/avatar.png';
 import duggupCompanyLogo from '$lib/assets/profile_krishna/company_duggup.svg';
 import betterupCompanyLogo from '$lib/assets/profile_krishna/company_betterup.svg';
+import mostPeopleCover from '$lib/assets/profile_krishna/timeline_most-people.png';
+import noAmountCover from '$lib/assets/profile_krishna/timeline_no-amount.png';
+import startupLessionCover from '$lib/assets/profile_krishna/timeline_startup-lesson.png';
+import yourBiggestCover from '$lib/assets/profile_krishna/timeline_your-biggest.png';
 import type { Timeline } from '@/types/Timeline';
 
 export const USER_PROFILE = {
@@ -28,10 +32,12 @@ export const USER_TIMELINE: {
 			stories: [
 				{
 					storyID: '11',
+					converUrl: noAmountCover,
 					title: 'No amount of technology can convert a bad story into a good story.'
 				},
 				{
 					storyID: '12',
+					converUrl: mostPeopleCover,
 					title:
 						"Most people don't have original ideas. Here is how Sam Altman pushes himself to have unpopular ideas."
 				}
@@ -45,8 +51,7 @@ export const USER_TIMELINE: {
 			companyLogo: duggupCompanyLogo,
 			companyLocation: 'San Francisco Bay Area',
 			role: 'Co-Founder and CEO',
-			position: 'Full-time',
-			location: 'Remote'
+			description: 'Full-time · Remote'
 		},
 		{
 			id: '3',
@@ -55,10 +60,12 @@ export const USER_TIMELINE: {
 			stories: [
 				{
 					storyID: '21',
+					converUrl: startupLessionCover,
 					title: 'Startup Lesson I am reflecting. Don\'t build for the "average person".'
 				},
 				{
 					storyID: '22',
+					converUrl: yourBiggestCover,
 					title: 'Your biggest regrets at 80 will be acts of omission.'
 				}
 			]
@@ -71,8 +78,7 @@ export const USER_TIMELINE: {
 			companyLogo: betterupCompanyLogo,
 			companyLocation: 'San Francisco Bay Area',
 			role: 'VP Engineering',
-			position: 'Full-time',
-			location: undefined
+			description: 'Full-time'
 		}
 	]
 };
