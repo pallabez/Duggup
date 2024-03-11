@@ -5,7 +5,7 @@
 	export let data;
 </script>
 
-<div class="lg:container">
+<div class="container">
 	<AppNavBar user={data.user} />
 	<main>
 		<slot />

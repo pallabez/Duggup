@@ -1,11 +1,16 @@
 import avatar from '$lib/assets/profile_krishna/avatar.png';
+import companyLogo from '$lib/assets/profile_krishna/company_duggup.svg';
 
 export const USER_PROFILE = {
 	id: '1',
 	username: 'Krishna Kiran',
 	bio: 'Co-Founder and CEO at Duggup - Social network for people in tech. Ex-Amazon Head of Engineering. I write hot-takes on building a business, shipping delightful products and accelerating product and career growth.',
 	avatar: avatar,
-	websiteLink: ''
+	websiteLink: '',
+	isFollowing: false,
+	companyLogo: companyLogo,
+	companyName: 'Duggup',
+	companyPosition: 'Co-Founder and CEO'
 };
 
 export const USER_TIMELINE = {

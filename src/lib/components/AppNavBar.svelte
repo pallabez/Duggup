@@ -20,7 +20,7 @@
 	export let user: User | undefined;
 </script>
 
-<header class="flex h-16 items-center border-b border-dotted border-border">
+<header class="flex h-16 items-center border-b border-dotted">
 	<a href="/" class="flex space-x-1">
 		<img src={brandLogo} alt="Logo" />
 		<img src={brandText} alt="Duggup" />
@@ -29,25 +29,27 @@
 	<div class="flex-1" />
 
 	<nav class="flex shrink-0 items-center gap-4">
-		<a href="/" class="flex items-center gap-1 p-2 text-primary-foreground">
+		<a href="/" class="flex items-center gap-1 p-2">
 			<img src={homeLogo} alt="" />
 			<span>Home</span>
 		</a>
-		<a href="/explore" class="flex items-center p-2 text-primary-foreground">
+		<a href="/explore" class="flex items-center p-2">
 			<img src={exploreLogo} alt="" />
 			<span>Explore</span>
 		</a>
-		<a href="/learn" class="flex items-center gap-1 p-2 text-primary-foreground">
+		<a href="/learn" class="flex items-center gap-1 p-2">
 			<img src={learnLogo} alt="" />
 			<span>Learn</span>
 		</a>
 	</nav>
 
 	<!-- Todo: Change logo to white on hover -->
-	<ButtonPrimary>
-		<img src={postLogo} alt="" class="mr-2 group-hover:mix-blend-multiply" />
-		<span>Post</span>
-	</ButtonPrimary>
+	<div class="mx-10">
+		<ButtonPrimary>
+			<img src={postLogo} alt="" class="mr-2 group-hover:mix-blend-multiply" />
+			Post
+		</ButtonPrimary>
+	</div>
 
 	{#if user}
 		<DropdownMenu.Root>
@@ -58,14 +60,14 @@
 						<Avatar.Fallback>Avatar</Avatar.Fallback>
 					</Avatar.Root>
 
-					<span class="text-base">
+					<span>
 						{user.username}
 					</span>
 					<img src={dropdownLogo} alt="Dropdown" class="px-2" />
 				</div>
 			</DropdownMenu.Trigger>
 
-			<DropdownMenu.Content>
+			<DropdownMenu.Content class="bg-primary">
 				<DropdownMenu.Group>
 					<DropdownMenu.Label>My Account</DropdownMenu.Label>
 					<DropdownMenu.Separator />
@@ -77,6 +79,6 @@
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
 	{:else}
-		{JSON.stringify(user)}
+		loading...
 	{/if}
 </header>
