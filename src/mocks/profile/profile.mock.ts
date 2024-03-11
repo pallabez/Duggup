@@ -1,5 +1,6 @@
 import avatar from '$lib/assets/profile_krishna/avatar.png';
 import companyLogo from '$lib/assets/profile_krishna/company_duggup.svg';
+import type { Timeline } from '@/types/Timeline';
 
 export const USER_PROFILE = {
 	id: '1',
@@ -13,7 +14,10 @@ export const USER_PROFILE = {
 	companyPosition: 'Co-Founder and CEO'
 };
 
-export const USER_TIMELINE = {
+export const USER_TIMELINE: {
+	userID: string;
+	timeline: Timeline;
+} = {
 	userID: '1',
 	timeline: [
 		{
@@ -67,7 +71,7 @@ export const USER_TIMELINE = {
 			companyLocation: 'San Francisco Bay Area',
 			role: 'VP Engineering',
 			position: 'Full-time',
-			location: null
+			location: undefined
 		}
 	]
 };

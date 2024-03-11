@@ -4,6 +4,6 @@ import { getUserProfile, getUserTimeline } from '@/mocks/profile/profile.fetch';
 export async function load({ params }) {
 	return {
 		user: await getUserProfile(params.profileID),
-		timeline: await getUserTimeline(params.profileID)
+		timeline: await getUserTimeline(params.profileID).timeline
 	};
 }
