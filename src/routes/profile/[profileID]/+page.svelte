@@ -12,6 +12,6 @@
 	<ProfileDetail {user} />
 </section>
 
-<section class="mx-auto w-full pt-8 lg:w-10/12">
+<section class="relative mx-auto w-full pt-8 lg:w-10/12">
 	<Timeline {timeline} />
 </section>

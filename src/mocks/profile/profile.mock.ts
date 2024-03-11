@@ -1,5 +1,6 @@
 import avatar from '$lib/assets/profile_krishna/avatar.png';
-import companyLogo from '$lib/assets/profile_krishna/company_duggup.svg';
+import duggupCompanyLogo from '$lib/assets/profile_krishna/company_duggup.svg';
+import betterupCompanyLogo from '$lib/assets/profile_krishna/company_betterup.svg';
 import type { Timeline } from '@/types/Timeline';
 
 export const USER_PROFILE = {
@@ -9,7 +10,7 @@ export const USER_PROFILE = {
 	avatar: avatar,
 	websiteLink: '',
 	isFollowing: false,
-	companyLogo: companyLogo,
+	companyLogo: duggupCompanyLogo,
 	companyName: 'Duggup',
 	companyPosition: 'Co-Founder and CEO'
 };
@@ -41,7 +42,7 @@ export const USER_TIMELINE: {
 			type: 'JOB_CHANGE',
 			displayDate: 'Nov 2023',
 			company: 'Duggup',
-			companyLogo: '',
+			companyLogo: duggupCompanyLogo,
 			companyLocation: 'San Francisco Bay Area',
 			role: 'Co-Founder and CEO',
 			position: 'Full-time',
@@ -67,7 +68,7 @@ export const USER_TIMELINE: {
 			type: 'JOB_CHANGE',
 			displayDate: 'Sep 2023',
 			company: 'BetterUp',
-			companyLogo: '',
+			companyLogo: betterupCompanyLogo,
 			companyLocation: 'San Francisco Bay Area',
 			role: 'VP Engineering',
 			position: 'Full-time',
