@@ -23,7 +23,7 @@
 <div class="flex">
 	<div class="flex w-28 flex-col items-center gap-2 md:mr-16">
 		<Avatar.Root class="h-24 w-24">
-			<Avatar.Image src={user.avatar} />
+			<Avatar.Image src={user.avatar} alt="Avatar of {user.username}" />
 			<Avatar.Fallback>Avatar</Avatar.Fallback>
 		</Avatar.Root>
 
@@ -35,7 +35,7 @@
 			<p class="w-11/12 max-w-2xl">{user.bio}</p>
 			<div class="ml-auto flex flex-col items-end">
 				<Avatar.Root>
-					<Avatar.Image src={user.companyLogo} />
+					<Avatar.Image src={user.companyLogo} alt="Logo of {user.companyName}" />
 					<Avatar.Fallback>Company Logo</Avatar.Fallback>
 				</Avatar.Root>
 				<span class="font-bold">{user.companyName}</span>
