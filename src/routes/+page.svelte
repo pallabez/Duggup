@@ -1,1 +1,1 @@
-<a href="/profile/mock_profile_id">Go to profile page</a>
+<a href="/profile/krishna_kiran" class="underline">Go to profile page</a>

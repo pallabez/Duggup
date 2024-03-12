@@ -71,7 +71,7 @@
 				<DropdownMenu.Group>
 					<DropdownMenu.Label>My Account</DropdownMenu.Label>
 					<DropdownMenu.Separator />
-					<DropdownMenu.Item>Profile</DropdownMenu.Item>
+					<DropdownMenu.Item href="/profile/krishna_kiran">Profile</DropdownMenu.Item>
 					<DropdownMenu.Item>Settings</DropdownMenu.Item>
 					<DropdownMenu.Item>Subscription</DropdownMenu.Item>
 					<DropdownMenu.Item>Logout</DropdownMenu.Item>
