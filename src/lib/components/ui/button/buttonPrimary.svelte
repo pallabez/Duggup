@@ -5,7 +5,7 @@
 <!-- Todo: Use tailwind function to merge class from props -->
 <Button
 	{...$$restProps}
-	class="group h-8 rounded-sm border border-solid border-border px-4 text-sm font-light shadow-button-primary hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
+	class="group h-8 rounded-sm border border-solid border-border px-4 text-sm font-normal shadow-button-primary hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
 >
 	<slot />
 </Button>

@@ -27,12 +27,14 @@
 			<Avatar.Fallback>Avatar</Avatar.Fallback>
 		</Avatar.Root>
 
-		<h3 class="text-wrap text-center text-2xl font-bold leading-7">{user.username}</h3>
+		<h3 class="text-wrap text-center text-2xl font-bold leading-7 text-text-light">
+			{user.username}
+		</h3>
 	</div>
 
 	<div class="flex flex-1 flex-col py-2">
 		<div class="flex flex-1">
-			<p class="w-11/12 max-w-2xl">{user.bio}</p>
+			<p class="w-11/12 max-w-2xl text-sm leading-6">{user.bio}</p>
 			<div class="ml-auto flex flex-col items-end">
 				<Avatar.Root>
 					<Avatar.Image src={user.companyLogo} alt="Logo of {user.companyName}" />

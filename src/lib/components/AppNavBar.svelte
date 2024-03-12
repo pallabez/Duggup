@@ -28,25 +28,25 @@
 
 	<div class="flex-1" />
 
-	<nav class="flex shrink-0 items-center gap-4">
+	<nav class="flex shrink-0 items-center lg:gap-4">
 		<a href="/" class="flex items-center gap-1 p-2">
 			<img src={homeLogo} alt="" />
-			<span>Home</span>
+			<span class="hidden text-text-light md:block">Home</span>
 		</a>
 		<a href="/explore" class="flex items-center p-2">
 			<img src={exploreLogo} alt="" />
-			<span>Explore</span>
+			<span class="hidden text-text-light md:block">Explore</span>
 		</a>
 		<a href="/learn" class="flex items-center gap-1 p-2">
 			<img src={learnLogo} alt="" />
-			<span>Learn</span>
+			<span class="hidden text-text-light md:block">Learn</span>
 		</a>
 	</nav>
 
 	<!-- Todo: Change logo to white on hover -->
-	<div class="mx-10">
+	<div class="md:mx-6 lg:mx-10">
 		<ButtonPrimary>
-			<img src={postLogo} alt="" class="mr-2 group-hover:mix-blend-multiply" />
+			<img src={postLogo} alt="" class="mr-2 hidden group-hover:mix-blend-multiply md:block" />
 			Post
 		</ButtonPrimary>
 	</div>
@@ -60,10 +60,10 @@
 						<Avatar.Fallback>Avatar</Avatar.Fallback>
 					</Avatar.Root>
 
-					<span>
+					<span class="hidden md:block">
 						{user.username}
 					</span>
-					<img src={dropdownLogo} alt="Dropdown" class="px-2" />
+					<img src={dropdownLogo} alt="Dropdown" />
 				</div>
 			</DropdownMenu.Trigger>
 

@@ -53,7 +53,8 @@ const config = {
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
 				},
 				text: {
-					DEFAULT: 'hsl(var(--text) / <alpha-value>)'
+					DEFAULT: 'hsl(var(--primary-text) / <alpha-value>)',
+					light: 'hsl(var(--primary-foreground) / <alpha-value>)'
 				}
 			},
 			borderRadius: {
