@@ -6,7 +6,7 @@
 	export let timeline: Timeline;
 </script>
 
-<div class="relative -left-[108px]">
+<div class="relative ml-[50px] border-l-2 border-dotted">
 	{#each timeline as timelineItem}
 		{#if timelineItem.type == 'STORIES'}
 			<TimelineStories item={timelineItem} />
@@ -14,6 +14,4 @@
 			<TimelineJobStatus item={timelineItem} />
 		{/if}
 	{/each}
-
-	<div class="absolute left-[162px] top-0 z-0 h-full border-l-2 border-dotted border-border" />
 </div>

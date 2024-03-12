@@ -7,24 +7,22 @@
 	export let item: TimelineJobStatus;
 </script>
 
-<div class="relative z-10 flex items-center gap-6 py-2">
-	<div class="w-34 invisible flex flex-col items-end lg:visible">
+<div class="relative z-10 flex h-40 max-w-[720px] items-center gap-6 py-2">
+	<div class="invisible absolute flex w-32 -translate-x-full flex-col items-end pr-10 lg:visible">
 		<Avatar.Root>
 			<Avatar.Image src={item.companyLogo} alt="Company logo of {item.company}" />
 		</Avatar.Root>
 
 		<span class="text-lg font-bold">{item.company}</span>
-		<span class="text-xs text-muted-foreground">{item.companyLocation}</span>
+		<span class="text-end text-xs text-muted-foreground">{item.companyLocation}</span>
 		<span class="text-xs text-muted-foreground">Joined</span>
 		<span class="text-xs text-muted-foreground">{item.displayDate}</span>
 	</div>
 
-	<div class="flex flex-col">
-		<img src={markUpSvg} alt="" class="absolute top-0" />
-		<img src={markSvg} alt="" class="" />
-	</div>
+	<img src={markUpSvg} alt="" class="absolute -left-[1px] top-0 -translate-x-1/2" />
+	<img src={markSvg} alt="" class="absolute -left-[1px] flex w-8 -translate-x-1/2 flex-col" />
 
-	<div class="flex-1 rounded-sm bg-white px-5 py-4 shadow-timeline-jobstatus">
+	<div class="ml-12 flex-1 rounded-sm bg-white px-5 py-4 shadow-timeline-jobstatus">
 		<h2 class="text-xl font-bold text-primary-text">{item.role}</h2>
 		<p class="mt-1 text-xs text-muted-foreground">
 			{item.description}

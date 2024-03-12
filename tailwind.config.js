@@ -15,7 +15,10 @@ const config = {
 		},
 		extend: {
 			colors: {
-				border: 'hsl(var(--border) / <alpha-value>)',
+				border: {
+					DEFAULT: 'hsl(var(--border) / <alpha-value>)',
+					light: 'hsl(217 16% 84%)'
+				},
 				input: 'hsl(var(--input) / <alpha-value>)',
 				ring: 'hsl(var(--ring) / <alpha-value>)',
 				background: 'hsl(var(--background) / <alpha-value>)',
