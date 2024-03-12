@@ -16,8 +16,13 @@
 		companyName: string;
 		companyPosition: string;
 	};
-
 	export let user: User;
+
+	// Todo: Move this logic from to parent component
+	let isFollowing = false;
+	function onFollowClick() {
+		isFollowing = !isFollowing;
+	}
 </script>
 
 <div class="flex">
@@ -46,7 +51,7 @@
 		</div>
 
 		<div class="flex items-center justify-between">
-			<ButtonPrimary>Follow</ButtonPrimary>
+			<ButtonPrimary on:click={onFollowClick}>{isFollowing ? 'Followed' : 'Follow'}</ButtonPrimary>
 
 			<div class="flex items-center gap-4">
 				<a href={user.websiteLink} target="_blank" class="flex gap-1">
